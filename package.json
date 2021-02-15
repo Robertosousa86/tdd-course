@@ -1,0 +1,24 @@
+{
+  "name": "tdd-course",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000t\u0000d\u0000d\u0000-\u0000c\u0000o\u0000u\u0000r\u0000s\u0000e\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robertosousa86/tdd-course.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Robertosousa86/tdd-course/issues"
+  },
+  "homepage": "https://github.com/Robertosousa86/tdd-course#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "gitignore": "^0.6.0"
+  }
+}
