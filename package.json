@@ -1,10 +1,12 @@
 {
   "name": "tdd-course",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000t\u0000d\u0000d\u0000-\u0000c\u0000o\u0000u\u0000r\u0000s\u0000e\u0000\r\u0000 \u0000",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,30 @@
   "dependencies": {
     "express": "^4.17.1",
     "gitignore": "^0.6.0"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "env": {
+      "node": true,
+      "es6": true,
+      "jest": true
+    },
+    "rules": {
+      "eqeqeq":"warn",
+      "prettier/prettier": "warn"
+    }
+  },
+  "prettier":{
+    "singleQuote": true,
+    "printWidth": 120
   }
 }
