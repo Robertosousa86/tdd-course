@@ -21,7 +21,9 @@
   "homepage": "https://github.com/Robertosousa86/tdd-course#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "gitignore": "^0.6.0"
+    "gitignore": "^0.6.0",
+    "sequelize": "^6.5.0",
+    "sqlite3": "^5.0.2"
   },
   "eslintConfig": {
     "parserOptions": {
