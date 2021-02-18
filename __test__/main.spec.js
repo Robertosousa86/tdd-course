@@ -1,6 +1,6 @@
 const request = require('supertest');
-
 const app = require('../src/app');
+const User = require('../src/user/User');
 
 describe('User Registration', () => {
   it('should returns 200 OK when sing-up request is valid ', (done) => {
@@ -28,6 +28,23 @@ describe('User Registration', () => {
       .then((response) => {
         expect(response.body.message).toBe('User created.');
         done();
+      });
+  });
+
+  it('should saves the user to database ', (done) => {
+    request(app)
+      .post('/api/1.0/users')
+      .send({
+        username: 'username',
+        email: 'user1@email.com',
+        password: 'P4ssword',
+      })
+      .then(() => {
+        // query user table
+        User.findAll().then((userlist) => {
+          expect(userlist.length).toBe(1);
+          done();
+        });
       });
   });
 });
