@@ -76,4 +76,22 @@ describe('User Registration', () => {
         });
       });
   });
+
+  it('should hashes the password in database', (done) => {
+    request(app)
+      .post('/api/1.0/users')
+      .send({
+        username: 'user1',
+        email: 'user1@email.com',
+        password: 'P4ssword',
+      })
+      .then(() => {
+        // query user table
+        User.findAll().then((userlist) => {
+          const savedUser = userlist[0];
+          expect(savedUser.password).not.toBe('P4ssword');
+          done();
+        });
+      });
+  });
 });
