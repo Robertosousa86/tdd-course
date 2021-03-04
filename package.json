@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Robertosousa86/tdd-course#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
+    "config": "^3.3.4",
     "express": "^4.17.1",
     "gitignore": "^0.6.0",
     "sequelize": "^6.5.0",
@@ -52,6 +53,7 @@
     "printWidth": 120
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "jest": "^26.6.3",
     "supertest": "^6.1.3"
   }
